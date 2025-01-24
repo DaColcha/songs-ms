@@ -18,6 +18,9 @@ import { ConfigModule } from '@nestjs/config';
       database: process.env.DB_SONGS_DATABASE,
       synchronize: true,
       autoLoadEntities: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     SongsModule,
   ],
